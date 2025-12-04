@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatórios Interativos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Resetando margens e padding */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página com tela cheia */
+        body {
+            height: 100vh; /* 100% da altura da tela */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background-color: #f0f0f0;
         }
 
+        /* Container para o iframe, ocupando 100% da tela */
         #conteudo {
-            width: 90%;
-            height: 90%;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100vw;  /* 100% da largura da tela */
+            height: 100vh; /* 100% da altura da tela */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: hidden; /* Evita barras de rolagem */
         }
 
+        /* Estilo para o iframe, ocupando toda a área disponível */
         iframe {
             width: 100%;
             height: 100%;
@@ -46,6 +51,7 @@
         const links = [
             'https://app.powerbi.com/view?r=eyJrIjoiMmNmNTJhYmEtMDFiZi00YzJlLThmODEtN2RhYmUwMjIyMDE1IiwidCI6IjQ2OGE3ZDg3LTM5ZGMtNDk5MC1iN2VjLTFmNjIzNjEwMDI1MiJ9'
         ];
+
 
         // Tempo de refresh (em milissegundos)
         const tempoRefresh = 10000; // 10 segundos
